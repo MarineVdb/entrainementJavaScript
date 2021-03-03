@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le jeu du pendu</title>
+</head>
+<body>
+
+    <form onkeydown='checkSubmit(event)'>
+        <h1> Le jeu du pendu </h1>
+
+        <div>
+            <p>Le mot à deviner est :<p>
+            <p id="secretWord"></p>
+        </div>
+
+        <div>
+            <label for="guess">Saisissez une ou plusieurs lettres, sont elles dans le mot secret ?</label>
+        </div>
+
+        <div>
+            <input type="text" id="guess" name="guess" onclick="reset()">
+        </div>
+       
+       <div>
+            <input type="button" value= "Envoyer" onclick = "checkLetters()">
+       </div>
+
+       <div id="message"></div>
+       <div id="tours"></div>
+       <div id="test"></div>
+        
+    </form>
+
+    <script type="text/javascript" language="JavaScript" src="pendu.js"></script>   
+</body>
+</html>
